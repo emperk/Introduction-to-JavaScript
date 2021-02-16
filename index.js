@@ -18,6 +18,12 @@ Do the following:
    HINT: no function required
 */
 
+var votingAge = 21;
+  if(votingAge >= 18){
+    console.log('true');
+  }
+
+
 
 
 /*
@@ -31,9 +37,17 @@ Do the following:
    HINT: no function required
 */
 
+var randoNum = 25;
+const setNum = 30;
 
+if (randoNum <= setNum) {
+  console.log('Not equal just yet')
+  var randoNum = 30;
+}
 
-
+if (randoNum === setNum) {
+  console.log('Yes, they are equal!')
+}
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -46,7 +60,18 @@ Do the following:
    HINT: look up the Number method
 */
 
+var numberVar = 1999;
+var stringVar = '1999';
+if (numberVar === stringVar) {
+  console.log(true);
+} else {
+  console.log(false);
+  var stringVar = 1999;
+}
 
+if (numberVar === stringVar) {
+  console.log('Yes, they are both numbers now!')
+}
 
 
 /*
@@ -58,11 +83,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a * b;
   }
 
-
+console.log(multiply(1,3));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -74,9 +99,11 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+  return age * 7;
 }
+
+console.log(dogYears(9));
 
 
 
@@ -201,8 +228,18 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(score){
+  if(score >= 90) {
+    return 'You got an A';
+  } else if(score < 90 || score >= 80) {
+    return 'You got a B';
+  } else if (score < 80 || score >= 70) {
+    return 'You got a C';
+  } else if (score < 70 || score >= 60) {
+    return 'You got a D';
+  } else  {
+    return 'You got an F';
+  }
   }
   
   
