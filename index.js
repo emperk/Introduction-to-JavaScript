@@ -181,17 +181,29 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-// var computer = Math.random();
+var computer = Math.random(game);
 
 function game(user, computer) {
-//   if (user === 'scissors' && computer === 'paper') {
-//     return 'you win!';
-//   } else if (user === 'paper' && computer === 'scissors') {
-//     return 'you lose!';
-//   } else if (user === 'paper' && computer === 'paper' || user === 'scissors' && computer === 'scissors') {
-//     return 'its a tie';
-   } 
-  
+  if (user === 'scissors' && computer === 'paper') {
+    return 'you win!';
+  } else if (user === 'paper' && computer === 'scissors') {
+    return 'you lose!';
+  } else if (user === 'paper' && computer === 'paper' || user === 'scissors' && computer === 'scissors') {
+    return 'its a tie';
+  } else if (user === 'paper' && computer === 'rock') {
+    return 'you win!';
+  } else if (user === 'rock' && computer === 'paper') {
+    return 'you lose!'; 
+  } else if (user === 'rock' && computer === 'rock') {
+    return 'its a tie!';
+  } else if (user === 'rock' && computer === 'scissors') {
+    return 'you win!';
+  } else if (user === 'scissors' && computer === 'rock') {
+    return 'you lose!';
+  } 
+}
+
+console.log(computer);
   
 //   (user === 'paper' && computer === 'rock') {
 //     return 'you win!';
@@ -214,7 +226,7 @@ Using the miles function below do the following:
 */
 
 function miles(kilometers){
-    return kilometers * 2.2;
+    return kilometers * 1.60934;
   }
 
 
@@ -228,7 +240,7 @@ Using the feet function below do the following:
 */
 
 function feet(centimeters){
-    return centimeters * 3.14;
+    return centimeters * 30.48;
   }
  
 
