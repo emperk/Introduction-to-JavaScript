@@ -18,7 +18,12 @@ Do the following:
    HINT: no function required
 */
 
-
+const votingAge = 16;
+if (votingAge >= 18) {
+  console.log('true');
+} else {
+  console.log('false');
+}
 
 /*
 Task 1b - Values
@@ -31,7 +36,14 @@ Do the following:
    HINT: no function required
 */
 
+var randoNum = 45;
+const setNum = 5;
 
+if(randoNum !== setNum) {
+  randoNum = setNum;
+}
+
+console.log(randoNum);
 
 
 
@@ -46,8 +58,17 @@ Do the following:
    HINT: look up the Number method
 */
 
+var stringNum = '1999';
+const num = 1999;
 
+if (stringNum !== num) {
+  console.log('Not Equal Yet');
+  stringNum = 1999;
+}
 
+if (stringNum === num) {
+  console.log('They are equal now!')
+}
 
 /*
 Task 1d - Multiply
@@ -58,9 +79,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a, b){
+    return a * b;
   }
+console.log(multiply(5,5));
 
 
 
@@ -74,9 +96,11 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age * 7;
 }
+
+console.log(dogYears(10));
 
 
 
@@ -107,10 +131,29 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age){
+  if (age < 0.2) {
+    return 'The puppy is too young';
+  } else if (age >= 0.2 && age < 0.4) {
+    return weight * 0.1;
+  } else if (age >= 0.4 && age < 0.7) {
+    return weight * 0.5;
+  } else if (age >= 0.7 && age < 1) {
+    return weight * 0.4;
+  } else {
+    if (weight <= 5) {
+      return weight * 0.05;
+    } else if (weight >= 6 && weight <= 10) {
+      return weight * 0.04;
+    } else if (weight >= 11 && weight <= 15) { return weight * 0.03;
+    } else if (weight > 15) {
+      return weight * 0.02;
+    }  
   }
+}
 
+
+console.log(hungryDog(15,1));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -145,17 +188,19 @@ if(computer <= 0.34) {
 console.log(computer);
 
 function game(user, computer){
-  if (user === computer) {
-    return `its a tie`;
-  } else if (user === 'rock' && computer === 'scissors') {
-    return `you win!`;
-  } else if (user === 'paper' && computer === 'rock') {
-    return `you win!`;
-  } else {
-    return `you lose!`;
-  }
+    if (user === computer) {
+      return `its a tie`;
+    } else if (user === 'rock' && computer === 'scissors') {
+      return `you win!`;
+    } else if (user === 'paper' && computer === 'rock') {
+      return `you win!`;
+    } else if (user === 'scissors' && computer === 'paper') {
+      return `you win!`;
+    } else {
+      return `you lose!`;
+    }
 }
-  
+
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
