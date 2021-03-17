@@ -145,7 +145,8 @@ function hungryDog(weight, age){
       return weight * 0.05;
     } else if (weight >= 6 && weight <= 10) {
       return weight * 0.04;
-    } else if (weight >= 11 && weight <= 15) { return weight * 0.03;
+    } else if (weight >= 11 && weight <= 15) { 
+      return weight * 0.03;
     } else if (weight > 15) {
       return weight * 0.02;
     }  
@@ -154,6 +155,8 @@ function hungryDog(weight, age){
 
 
 console.log(hungryDog(15,1));
+
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -188,7 +191,6 @@ if(computer <= 0.34) {
 console.log(computer);
 
 function game(user, computer){
-console.log(user);
     if (user === computer) {
       return `it's a tie`;
     } else if (user === 'rock' && computer === 'scissors') {
@@ -201,6 +203,9 @@ console.log(user);
       return `you lose!`;
     }
 }
+console.log(game());
+
+
 
   
 
@@ -282,7 +287,7 @@ function grade(score){
     return 'you got a C';
   } else if (score >= 60 && score <= 69) {
     return 'you got a D';
-  } else if (score >= 59) {
+  } else if (score <= 59) {
     return 'you got an F';
   }
 }
@@ -303,10 +308,18 @@ Using the vowelCounter function below do the following:
 */
 
 
-function vowelCounter(/*word*/) {
-  // let vowel = ['a', 'e', 'i', 'o', 'u'];
-  // fo
+function vowelCounter(word) {
+  let vowel = ['a', 'e', 'i', 'o', 'u'];
+  let counter = 0;
+  word = word.toLowerCase();
+  for (let i = 0; i <= word.length; i++) {
+    if(word.includes(vowel[i]));
+    counter++;
+  }
+  return counter;
 }
+
+console.log(vowelCounter('RANDOM'));
 
 
 
